@@ -1,0 +1,81 @@
+img {
+  margin: 0;
+  padding: 0;
+}
+.poster-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px 10px;
+  color: white;
+  /* background-color: yellow; */
+}
+.posters::-webkit-scrollbar {
+  display: none;
+}
+.posters {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 10px;
+}
+.poster {
+  background-color: gray;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.poster-img {
+  object-fit: cover;
+  width: 280px;
+  height: 350px;
+  transition: transform 0.5s ease;
+}
+.movie-details {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    /* align-items: center; */
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.movie-details-small {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.poster:hover .movie-details{
+    padding: 5px ;
+    left: -5px;
+    display: flex;
+    background-color: rgba(155, 148, 148, 0.25);
+}
+.poster:hover .movie-details-small{
+  padding: 5px ;
+    left: -5px;
+    display: flex;
+    background-color: rgba(155, 148, 148, 0.25);
+}
+.poster:hover .poster-img {
+    transform: scale(1.03);
+  }
+.poster-small{
+  object-fit: cover;
+  width: 200px;
+  height: 270px;
+  transition: transform 0.4s ease;
+}
+.poster:hover .poster-small {
+  transform: scale(1.03);
+}
